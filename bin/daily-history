@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby 
+
+
+require './lib/daily_history'
+DailyHistory::CLI.new.call 
