@@ -7,23 +7,23 @@ How to Build a CLI Gem
 6.	Start making things real 
 7.	Discover objects 
 8.	Program  
--	A command line interface where you enter Date and receive either history of that date entered. 
--	User types in date
+
 -	Shows list of historical event of that date entered
--	Would ask if they would like more history of the date entered?
--	History info starts off with Headline than summary 
+-	Ask user what number of listed history he would liek to read a short summary of.
+-	History info starts off with Headline than gives summary when chosen
 
--	What website will you be scraping? OnThisDay.com or similar sites that work well for scraping 
+-	What website will you be scraping? https://www.timeanddate.com/on-this-day/
 
--	What will you need to do with the data you return from scraping? Return headlines and paragraphs associated with the headlines
+-	What will you need to do with the data you return from scraping? Return headlines and summary associated with the headlines
 -	
--	What classes will you be using? Div, ul and li classes.
+-	What classes will you be using?  classes.
 -	
 -	What will be the flow of displaying data for your application? ex How will your CLI portion work. 
--	1. User will be asked to enter date as follow xx/xx/xxxx
+-	1. Will list history when opening app
 -	2. Scrap will return headlines in numerical order for the date entered.
--	3. User can choose number they want to read more about for that day.
--	4. When user chooses number of headline they are more interested in. It will display paragraph
+-	3. User can choose number they want to read more about.
+
+-	4. When user chooses number of headline they are more interested in, It will display more info/summary.
 -	
 -	How will you display data one level deep to the user? Will display a headline in numerical order and user will be able to choose number to read more on the headline.
 -	
@@ -35,3 +35,8 @@ Has a date
 Has a headline 
 Has more info/Summary 
 
+
+Scrape notes:
+1. Need to scrape Date 
+2. Scrape Title's of history list 
+3. Summary

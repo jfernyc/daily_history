@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby 
 
 
-require './lib/daily_history'
-DailyHistory::CLI.new.call 
+
+require "bundler/setup"
+require "daily_history"
+
+DailyHistory::CLI.new.call  #can start program into this object entirely 
+

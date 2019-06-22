@@ -1,14 +1,37 @@
-class DailyHistory::History 
+ #require 'pry'
 
-	def self.today 
-   #I should return a bunch of instances of history of the day
-    puts "Today in History:"
-     	puts <<-DOC.gsub /^\s*/, ''
-        1.List of history
-        2.From most recent 1st to oldest last 
-        DOC
+#class DailyHistory::History
 
-	end 
+  #attr_accessor :title, :summary, :url 
+
+  #@@all = [] 
+
+  #def initialize( title = nil)
+
+    #@title = title 
+    #@headline = headline
+    #@summary = summary 
+    #@@all << self 
+  #end 
 
 
-end 
+  #def self.all 
+    #@@all 
+  #end 
+
+#end 
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
