@@ -1,6 +1,6 @@
 class DailyHistory::Scrape 
     
-
+  
    
 
      def self.scrape_all 
@@ -15,6 +15,19 @@ class DailyHistory::Scrape
         title = doc.search(".otd-cat").first.text  #On this day date ex June 13 will appeaer 
       end 
 
+       def self.scrape_summary
+         doc = Nokogiri::HTML(open("https://www.timeanddate.com/on-this-day/"))
+          
+         summary = doc.search("li  p")
+
+         all_summaries = [] 
+         summary.each do |sum|
+         all_summaries << sum.text 
+
+      end 
+     all_summaries[0..4]
+  end 
+
 
       def self.scrape_headlines
       	 doc = Nokogiri::HTML(open("https://www.timeanddate.com/on-this-day/"))
@@ -22,7 +35,7 @@ class DailyHistory::Scrape
          headlines = doc.search("li h3.otd-ttl")
 
          all_headlines = [] 
-         headlines = doc.search("li h3.otd-ttl").each do |h3|
+         headlines.each do |h3|
       	 all_headlines << h3.text
 
       	end 
@@ -32,8 +45,3 @@ class DailyHistory::Scrape
      end 
 
    
-   def self.scrape_summary
-     doc = Nokogiri::HTML(open("https://www.timeanddate.com/on-this-day/"))
-     summary = doc.search(".otd-row").first.css("p").first.text  #summary of the headlines
-
-   end 
