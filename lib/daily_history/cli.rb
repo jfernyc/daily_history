@@ -3,7 +3,7 @@
 
 class DailyHistory::CLI 
 
-	def call
+	def initialize
      
      welcome 
      list_headlines  #list the headlines of the particular day 
@@ -14,10 +14,10 @@ class DailyHistory::CLI
   
 
     def welcome
-       puts "---Welcome to Daily History--- \n\n"
+       puts " \033[1m\n ---Welcome to Daily History---\n\033[0m "
 
        welcome = DailyHistory::Scrape.scrape_title  
-       puts " #{welcome} \n\n "  #will puts On this day ex: June 22, 2019
+       puts "  \033[1m#{welcome} \n\033[0m  "  #will puts On this day ex: June 22, 2019
    end 
 
     
@@ -25,7 +25,7 @@ class DailyHistory::CLI
      headlines = DailyHistory::Scrape.scrape_headlines
      headlines.each_with_index do |hline, i|
 
-      puts " #{i+1}. #{hline}"
+      puts " #{i+1}. #{hline} \n"
 
    
     end 
@@ -36,7 +36,7 @@ end
 
       input = nil 
       while input != "exit"
-      puts "Enter the number of the Headline you would like to read more about, to see list again type --list-- or type --exit-- \n\n "
+      puts "\n Enter the number of the Headline you would like to read more about, to see list again type --list-- or type --exit-- \n\n "
 
       input = gets.strip.downcase
 
@@ -45,9 +45,9 @@ end
        headlines = DailyHistory::Scrape.scrape_headlines[input.to_i-1]
        summaries = DailyHistory::Scrape.scrape_summary[input.to_i-1]
         
-        puts " Title: #{headlines} \n\n"
+        puts " \033[1mTitle:\033[0m  \n#{headlines} \n\n"
         
-        puts "Here is the summary:\n # #{summaries} \n\n"
+        puts " \033[1mHere is the summary:\033[0m \n#{summaries} \n\n"
 
        elsif input == "list"
          
@@ -55,7 +55,7 @@ end
           list_headlines
         
       else 
-         
+         puts ""
          puts "Goodbye!"
 
      end 
@@ -64,5 +64,6 @@ end
 
    def goodbye 
      puts "See you tomorrow for more history!!!"
+     puts ""
    end 
 end 

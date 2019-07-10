@@ -1,8 +1,14 @@
 # DailyHistory
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/daily_history`. To experiment with that code, run `bin/console` for an interactive prompt.
+This project called Daily History will provide a quick glance into the history of the current day. I used https://www.timeanddate.com/on-this-day/ to scrape the data from. The CLI would greet you with:
 
-TODO: Delete this and the text above, and describe your gem
+" What Happened On This day - Current Date " 
+
+And will list a short list of historical headlines in numeric order.
+
+The user will then be able to choose a headline to read more about by selecting the number of the headline of their interest. Once the number of the headline is selected the user will get a brief summary of the chosen headline.
+
+
 
 ## Installation
 
@@ -32,7 +38,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/daily_history. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/jfernyc/daily_history. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -40,4 +46,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the DailyHistory project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/daily_history/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the DailyHistory project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/jfernyc/daily_history/blob/master/CODE_OF_CONDUCT.md).

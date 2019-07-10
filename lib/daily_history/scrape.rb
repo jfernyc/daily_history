@@ -4,15 +4,13 @@ class DailyHistory::Scrape
    
 
      def self.scrape_all 
-
-     puts "SCRAPING Titles and Articles **********"
- 	 doc = Nokogiri::HTML(open("https://www.timeanddate.com/on-this-day/"))   
+        doc = Nokogiri::HTML(open("https://www.timeanddate.com/on-this-day/"))    
 
      end 
 
       def self.scrape_title
       	doc = Nokogiri::HTML(open("https://www.timeanddate.com/on-this-day/"))
-        title = doc.search(".otd-cat").first.text  #On this day date ex June 13 will appeaer 
+        title = doc.search(".otd-cat").first.text   
       end 
 
        def self.scrape_summary
