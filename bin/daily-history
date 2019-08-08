@@ -5,5 +5,6 @@
 require "bundler/setup"
 require "daily_history"
 
-DailyHistory::CLI.new.call  #can start program into this object entirely 
+new_cli = DailyHistory::CLI.new
+new_cli.call  #can start program into this object entirely 
 
