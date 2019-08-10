@@ -13,7 +13,7 @@ class DailyHistory::CLI
      DailyHistory::Scrape.scrape_all
      list_headlines  
      menu 
-     goodbye
+  
      
 	end 
   
@@ -43,9 +43,12 @@ end
       input = gets.strip.downcase
             
 
-      if input.to_i-1 <= DailyHistory::Article.all.size
-         article = DailyHistory::Article.all[input.to_i-1]
+      #if input.to_i-1 <= DailyHistory::Article.all.size
+         #article = DailyHistory::Article.all[input.to_i-1]
          #binding.pry
+
+         if input.to_i > 0 && input.to_i-1 <= DailyHistory::Article.all.size
+         article = DailyHistory::Article.all[input.to_i-1]
         
        puts "Headline: #{article.headline}"
        puts " "
